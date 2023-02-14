@@ -1,0 +1,47 @@
+.radio-buttons {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.cutom-radio-btn input {
+  display: none;
+}
+.radio-btn {
+  margin: 10px;
+  width: 180px;
+  height: 200px;
+  border: 10px solid transparent;
+  display: inline-block;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 20px #c3c3c367;
+  cursor: pointer;
+}
+.radio-btn > svg {
+  color: green;
+  opacity: 0;
+  font-size: 20px;
+  position: absolute;
+  top: -20px;
+  left: 0%;
+  padding: 3px;
+  transform: translateX(-50%) scale(3);
+  transition: 0.2s;
+  pointer-events: none;
+}
+.radio-btn .paymentimg {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cutom-radio-btn input:checked + .radio-btn {
+  border: 3px solid green;
+}
+.cutom-radio-btn input:checked + .radio-btn > svg {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
